@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+
+{% block navbar %}
+    <li><a class="nav-link scrollto" href="{{url_for('home')}}">Home</a></li>
+    <li><a class="nav-link scrollto active" href="{{url_for('about')}}" style="color: yellow;">About</a></li>
+    <li><a class="nav-link scrollto" href="{{url_for('prediction')}}">Prediction</a></li>
+    <li><a class="nav-link scrollto" href="{{url_for('index')}}">LogOut</a></li>
+{% endblock %}
+
+
+{% block content %}
+    <section id="about" class="about" style="background-color: rgb(21, 92, 155); min-height: 700px;">
+        <div class="container" style="margin-top: 100px;">
+            <div class="section-title">
+                <h2 style="color: white;">About</h2>
+                <p style="color: white; text-align: justify;">
+                    Stroke is a critical health condition that requires timely diagnosis and intervention to mitigate its potentially devastating effects. This project proposes an innovative approach to stroke identification using machine learning techniques applied to neuro images. The goal is to develop a diagnostic model capable of accurately detecting and classifying strokes based on imaging data. The project focuses on leveraging advanced machine learning algorithms, such as Convolutional Neural Networks (CNNs) and possibly Recurrent Neural Networks (RNNs), to analyze neuro images obtained through techniques like MRI (Magnetic Resonance Imaging) and CT (Computed Tomography) scans. These algorithms will be trained on a dataset comprising a variety of stroke cases, including ischemic and hemorrhagic strokes, to ensure robustness and generalizability. Key objectives include preprocessing neuro images to enhance feature extraction, implementing state-of-the-art machine learning models for classification, and evaluating the model's performance through metrics such as accuracy, sensitivity, specificity, and ROC (Receiver Operating Characteristic) curves. The ultimate aim is to develop a reliable and efficient tool for healthcare practitioners to assist in early and accurate stroke diagnosis, thereby improving patient outcomes and reducing healthcare costs associated with stroke management. By harnessing the power of machine learning and neuro imaging, this project seeks to contribute significantly to the field of medical diagnostics, particularly in the realm of stroke identification, paving the way for more effective clinical decision-making and patient care.
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

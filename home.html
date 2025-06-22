@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+
+{% block navbar %}
+    <li><a class="nav-link scrollto active" href="{{url_for('home')}}" style="color: yellow;">Home</a></li>
+    <li><a class="nav-link scrollto" href="{{url_for('about')}}">About</a></li>
+    <li><a class="nav-link scrollto" href="{{url_for('prediction')}}">Prediction</a></li>
+    <li><a class="nav-link scrollto" href="{{url_for('index')}}">LogOut</a></li>
+{% endblock %}
+
+
+{% block content %}
+    <section id="hero" class="d-flex flex-column justify-content-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8">
+            <h1>WELCOME!</h1>
+            <h2>Innovations in Stroke Identification: A Machine Learning based Diagnostic Model using Neuro Images</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

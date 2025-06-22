@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+
+{% block navbar %}
+    <li><a class="nav-link scrollto" href="{{url_for('index')}}">Home</a></li>
+    <li><a class="nav-link scrollto" href="{{url_for('register')}}">Register</a></li>
+    <li><a class="nav-link scrollto active" href="{{url_for('login')}}" style="color: yellow;">Login</a></li>
+{% endblock %}
+
+
+{% block content %}
+    <section id="contact" class="contact" style="background-color: rgb(158, 39, 118); min-height: 650px;">
+        <div class="container">
+            <div class="row mt-5">
+                <center>
+                    <div style="background-color: white; width: 600px; border-radius: 10px; margin-top: 50px;">
+                        <div class="col-10 mt-5 mt-lg-0">
+                            <form action="{{url_for('login')}}" method="post" role="form" class="php-email-form">
+
+                                <h2><b><br>Login</b></h2>
+        
+                                <div class="form-group mt-3">
+                                    <input type="email" class="form-control" name="email" placeholder="Email ID" required>
+                                </div>
+        
+                                <div class="form-group mt-3">
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                </div><br>
+        
+                                <div class="text-center">
+                                    <button type="submit" class="col-12">Submit</button>
+                                </div><br><br>
+                            </form>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </section>
+{% endblock %}
